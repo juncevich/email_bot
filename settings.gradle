@@ -1,1 +1,5 @@
 rootProject.name = 'email_bot'
+
+include('bot')
+include('mail_server')
+include('postman')
