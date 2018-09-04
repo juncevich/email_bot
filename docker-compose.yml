@@ -1,0 +1,18 @@
+version: '2'
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+    - "5672:5672"
+    - "15672:15672"
+    restart: always
+
+  postgres:
+    image: postgres
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=message_db
+    ports:
+    - "5432:5432"
+    restart: always

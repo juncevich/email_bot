@@ -27,7 +27,10 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.telegram:telegrambots-spring-boot-starter:4.1')
+    compile("org.springframework.boot:spring-boot-starter-amqp")
+    compile project(':common')
+    compile('com.google.code.gson:gson:2.8.5')
+    compileOnly('org.projectlombok:lombok:1.16.22')
     runtime('org.springframework.boot:spring-boot-devtools')
-    compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

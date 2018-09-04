@@ -23,11 +23,17 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-integration')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-amqp')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '2.0.4.RELEASE'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.11'
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+    compile('com.google.code.gson:gson:2.8.5')
+    compile project(':common')
+    compileOnly('org.projectlombok:lombok:1.16.22')
     runtime('org.springframework.boot:spring-boot-devtools')
-    compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
