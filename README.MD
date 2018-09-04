@@ -8,5 +8,6 @@
 
 Шлешь письмо на test_teset@bk.ru
 
+Не забудь docker-compose up
 
 Ждешь ответ
