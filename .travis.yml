@@ -15,6 +15,9 @@ addons:
   script:
   - sonar-scanner
 
+services:
+- postgresql
+
 before_install:
 - chmod +x gradlew
 
