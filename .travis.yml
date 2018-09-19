@@ -31,14 +31,15 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 
 script:
-- docker-compose build
-- docker-compose run test
+- docker-compose up --build -d
 - ./gradlew wrapper
 - ./gradlew check
 - ./gradlew codeCoverageReport
 - ./gradlew sonarqube
 after_success:
 - bash <(curl -s https://codecov.io/bash)
+after_script:
+- docker-compose down
 
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
