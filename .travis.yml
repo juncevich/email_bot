@@ -31,6 +31,8 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 
 script:
+- docker-compose down
+- docker-compose build
 - docker-compose up -d
 - ./gradlew wrapper
 - ./gradlew check
