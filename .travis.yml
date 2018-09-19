@@ -7,6 +7,14 @@ addons:
     branches:
     - master
 
+
+    sonarcloud:
+      organization:
+      token:
+        secure: *********
+  script:
+  - sonar-scanner
+
 before_install:
 - chmod +x gradlew
 
