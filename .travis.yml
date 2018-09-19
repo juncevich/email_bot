@@ -7,13 +7,11 @@ addons:
     branches:
     - master
 
+  sonarcloud:
+    organization: $SONAR_ORGANIZATION
+    token:
+      secure: $SONAR_TOKEN
 
-    sonarcloud:
-      organization: $SONAR_ORGANIZATION
-      token:
-        secure: $SONAR_TOKEN
-  script:
-  - sonar-scanner
 
 services:
 - postgresql
@@ -26,6 +24,7 @@ before_install:
 script:
 - ./gradlew wrapper
 - ./gradlew check
+- sonar-scanner
 
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
