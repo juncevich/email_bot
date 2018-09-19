@@ -35,7 +35,6 @@ dependencies {
     compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
     compile('org.springframework.boot:spring-boot-starter-integration')
     compile('org.telegram:telegrambots-spring-boot-starter:4.1')
-    compile project(':common')
     compileOnly('org.projectlombok:lombok:1.16.22')
     runtime('org.springframework.boot:spring-boot-devtools')
     testCompile('org.springframework.boot:spring-boot-starter-test')
