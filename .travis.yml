@@ -20,6 +20,8 @@ services:
 
 before_install:
 - chmod +x gradlew
+- psql -c 'create database message_db;' -U postgres
+- psql -c 'alter user postrgres with password 'postgres';' -U postgres
 
 script:
 - ./gradlew wrapper
