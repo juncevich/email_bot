@@ -1,11 +1,14 @@
 language: java
-sudo: true
+sudo: false
 addons:
   apt:
     packages:
     - oracle-java8-installer
     branches:
     - master
+
+before_install:
+- chmod +x gradlew
 
 script:
 - ./gradlew wrapper
