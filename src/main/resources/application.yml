@@ -2,7 +2,7 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/message_db
-    username: user
+    username: test_user
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
