@@ -9,9 +9,9 @@ addons:
 
 
     sonarcloud:
-      organization:
+      organization: $SONAR_ORGANIZATION
       token:
-        secure: *********
+        secure: $SONAR_TOKEN
   script:
   - sonar-scanner
 
