@@ -18,7 +18,7 @@ services:
 - docker
 
 env:
-  COMPOSE_VERSION: 1.4.1
+  COMPOSE_VERSION: 1.6.2
 
 
 
